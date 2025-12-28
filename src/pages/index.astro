@@ -11,8 +11,10 @@ import Layout from '../layouts/Layout.astro';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sebastian Zhunaula - Portfolio</title>
+    <title>Link in Bio</title>
 	<link rel="stylesheet" href="/src/styles/style.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+	<link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" /> 
 </head>
 <body>
     <div class="container">
@@ -23,16 +25,38 @@ import Layout from '../layouts/Layout.astro';
             <p class="location">📍 Ecuador</p>
             <p class="description">Software Development | Cybersecurity | Data Science and AI</p>
             
-            <div class="social-links">
-                <a href="#" title="YouTube">▶️</a>
-                <a href="#" title="LinkedIn">💼</a>
-                <a href="#" title="GitHub">🐙</a>
-                <a href="#" title="Discord">💬</a>
-                <a href="#" title="Twitter">𝕏</a>
-                <a href="#" title="TikTok">🎵</a>
-                <a href="#" title="Instagram">📷</a>
-                <a href="#" title="Threads">🧵</a>
-            </div>
+<div class="social-links">
+    <a href="#" title="YouTube">
+        <i class="fab fa-youtube"></i>
+    </a>
+    <a href="#" title="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="#" title="GitHub">
+        <i class="fab fa-github"></i>
+    </a>
+    <a href="#" title="Discord">
+        <i class="fab fa-discord"></i>
+    </a>
+    <a href="#" title="Twitter">
+        <i class="fab fa-x-twitter"></i>
+    </a>
+    <a href="#" title="TikTok">
+        <i class="fab fa-tiktok"></i>
+    </a>
+    <a href="#" title="Instagram">
+        <i class="fab fa-instagram"></i>
+    </a>
+    <a href="#" title="Threads">
+        <i class="fab fa-threads"></i>
+    </a>
+    <a href="#" title="CodePen">
+        <i class="fab fa-codepen"></i>
+    </a>
+    <a href="#" title="Astro">
+        <i class="devicon-astro-plain"></i>
+    </a>
+</div>
         </header>
 
         <!-- Main Cards -->
@@ -53,57 +77,36 @@ import Layout from '../layouts/Layout.astro';
                 </div>
             </div>
 
-            <div class="card">
-                <div class="icon">🚀</div>
-                <div class="card-content">
-                    <h2>Astro</h2>
-                    <p>Temas modernos y optimizados para Astro</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="icon">⚙️</div>
-                <div class="card-content">
-                    <h2>CodePen</h2>
-                    <p>Demos y prototipos web en vivo</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="icon">📦</div>
-                <div class="card-content">
-                    <h2>Hack The Box</h2>
-                    <p>Plataforma de entrenamiento en ciberseguridad</p>
-                </div>
-            </div>
         </main>
 
-        <!-- YouTube Section -->
-        <section class="youtube-section">
-            <h2>📹 Último video de YouTube</h2>
-            <div class="video-container">
-                <div class="video-thumbnail">
-                    <div style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), #1a1a1a; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: bold;">
-                        ¿QUÉ ES LINUX?
-                    </div>
-                    <div class="play-button">▶</div>
-                </div>
-                
-                <div class="video-info">
-                    <p class="video-title">¿Qué es Linux? El sistema operativo que domi...</p>
-                    <div class="copy-link">
-                        📋 Copiar vín...
-                    </div>
-                </div>
+<!-- YouTube Section -->
+<section class="youtube-section">
+    <h2> <i class="fas fa-video"></i> Último video de YouTube</h2>
+    <div class="video-container">
+        <div class="video-embed">
+            <iframe 
+                width="100%" 
+                height="315" 
+                src="https://www.youtube.com/embed/XkGY1N97elo" 
+                title="¿Qué es Linux? El sistema operativo que domina el mundo" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen
+                style="border-radius: 8px;">
+            </iframe>
+        </div>
+        
 
-                <div class="video-icons">
-                    <div class="video-icon debian">🌀</div>
-                    <div class="video-icon tux">🐧</div>
-                    <div class="video-icon debian-dark">🌀</div>
-                    <div class="video-icon ubuntu">🔶</div>
-                </div>
-            </div>
-        </section>
+</section>
+
+<script>
+function copyLink() {
+    const videoUrl = 'https://www.youtube.com/watch?v=XkGY1N97elo';
+    navigator.clipboard.writeText(videoUrl).then(() => {
+        alert('¡Vínculo copiado al portapapeles!');
+    });
+}
+</script>
     </div>
 </body>
 </html>
