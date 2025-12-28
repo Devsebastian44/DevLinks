@@ -177,6 +177,8 @@ main a {
     position: relative;
     overflow: hidden;
     width: 100%;
+    width: 96%;
+    margin-left: 10px;
 }
 
 /* Efecto de grid tecnológico */
